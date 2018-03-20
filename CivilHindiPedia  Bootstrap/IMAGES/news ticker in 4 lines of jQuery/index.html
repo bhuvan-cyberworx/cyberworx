@@ -1,0 +1,49 @@
+<!doctype html>
+<head>
+<meta charset="utf-8" />
+<title>Workshop.rs: News Ticker in 4 lines of jQuery</title>
+
+<link href="resources/css/global.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div class="bar">
+		<a href="http://workshop.rs">« GO TO WORKSHOP</a>
+	</div>
+
+	<ul id="ticker">
+		<li>
+			<a href="http://workshop.rs/2009/12/jqbargraph-jquery-graph-plugin/">jqBarGraph</a> is jQuery plugin that gives you freedom to easily display your data as graphs. There are three types of graphs: simple, multi and stacked.
+		</li>
+		<li>
+			Learn how to create <a href="http://workshop.rs/2010/07/create-image-gallery-in-4-lines-of-jquery/">image gallery in 4 lines of Jquery</a>
+		</li>
+		<li>
+			<a href="http://workshop.rs/2009/12/image-gallery-with-fancy-transitions-effects">jqFancyTransitions</a> is easy-to-use jQuery plugin for displaying your photos as slideshow with fancy transition effects.
+		</li>
+		<li>
+			<a href="http://workshop.rs/2010/02/moobargraph-ajax-graph-for-mootools/">mooBarGraph</a> is AJAX graph plugin for MooTools which support two types of graphs, simple bar and stacked bar graph.
+		</li>
+	</ul>
+
+
+
+
+
+</div>
+
+
+<script>
+
+	function tick(){
+		$('#ticker li:first').slideUp( function () { $(this).appendTo($('#ticker')).slideDown(); });
+	}
+	setInterval(function(){ tick () }, 5000);
+
+
+</script>
+
+</body>
+</html>
